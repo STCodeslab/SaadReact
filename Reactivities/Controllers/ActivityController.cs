@@ -28,5 +28,12 @@ namespace Reactivities.Controllers
             return await _context.Activities.FindAsync(id);
         }
 
+
+        [HttpGet]
+        public async Task<ActionResult<List<Activity>>> GetActivitytoo()
+        {
+            return await _context.Activities.ToListAsync();
+
+        }
     }
 }
